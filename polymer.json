@@ -1,0 +1,27 @@
+{
+  "entrypoint": "index.html",
+  "shell": "src/buses-madrid-app.html",
+  "fragments": [
+    "src/view-home.html",
+    "src/view-privacy-policy.html",
+    "src/view-404.html"
+  ],
+  "sources": [
+    "src/**/*",
+    "images/**/*",
+    "bower.json"
+  ],
+  "extraDependencies": [
+    "manifest.json",
+    "bower_components/webcomponentsjs/*.js"
+  ],
+  "lint": {
+    "rules": ["polymer-2"]
+  },
+  "builds": [
+    {
+      "name": "default",
+      "preset": "es5-bundled"
+    }
+  ]
+}

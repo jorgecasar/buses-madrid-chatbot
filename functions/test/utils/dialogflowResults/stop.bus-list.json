@@ -1,0 +1,54 @@
+{
+  "id": "f542ef25-3ccd-4210-8abd-4f0c16e84626",
+  "timestamp": "2018-01-07T12:34:31.872Z",
+  "lang": "es",
+  "result": {
+    "source": "agent",
+    "resolvedQuery": "¿Qué autobuses pasan por la parada 4267?",
+    "action": "stop.bus-list",
+    "actionIncomplete": false,
+    "parameters": {
+      "stop": {
+        "stopId": 4267
+      }
+    },
+    "contexts": [
+      {
+        "name": "input",
+        "parameters": {
+          "stop": {
+            "stopId": 4267,
+            "stopId.original": "4267?",
+            "stopId.object": {}
+          },
+          "stop.original": "parada 4267?"
+        },
+        "lifespan": 5
+      }
+    ],
+    "metadata": {
+      "intentId": "47b6464a-0ffc-4fec-986a-004e7a2b5244",
+      "webhookUsed": "true",
+      "webhookForSlotFillingUsed": "false",
+      "webhookResponseTime": 253,
+      "intentName": "stop.bus-list"
+    },
+    "fulfillment": {
+      "speech": "",
+      "messages": [
+        {
+          "type": 0,
+          "speech": ""
+        }
+      ]
+    },
+    "score": 1
+  },
+  "status": {
+    "code": 206,
+    "errorType": "partial_content",
+    "errorDetails": "Webhook call failed. Error: 500 Internal Server Error",
+    "webhookTimedOut": false
+  },
+  "sessionId": "32d258e9-4613-4fc1-be95-a3d78be3a3d9"
+}

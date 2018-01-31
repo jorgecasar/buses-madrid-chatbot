@@ -1,0 +1,6 @@
+.firebaserc
+node_modules
+bower_components
+firebase-debug.log
+buses-madrid-*.json
+build

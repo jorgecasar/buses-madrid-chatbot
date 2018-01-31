@@ -1,0 +1,123 @@
+{
+	"app": {
+		"name": "Autobuses de Madrid"
+	},
+	"text": {
+		"separator": {
+			"item": ", ",
+			"and": " y ",
+			"or": " o "
+		},
+		"more-help": [
+			"¿Puedo ayudarte con otra cosa?",
+			"¿Algo más?",
+			"¿En qué más te puedo ayudar?",
+			"¿Quieres saber algo más?",
+			"¿Tienes otra pregunta?"
+		],
+		"map": "mapa"
+	},
+	"goodbye": [
+		"¡Hasta otra!",
+		"¡Qué tengas un buen viaje!",
+		"Nos vemos en otro momento.",
+		"¡Hasta luego!"
+	],
+	"welcome": {
+		"greeting": "¡Bienvenido a {{appName}}! ¿En qué puedo ayudarte?",
+		"welcomeback": [
+			"¡Hola!",
+			"Buenas",
+			"Hey, otra vez por aquí.",
+			"¡Qué bien verte otra vez!"
+		]
+	},
+	"stops": {
+		"stops-list": {
+			"none": "No he encontrado ninguna parada del {{lineId}} cerca.",
+			"one": "He encontrado una parada donde para el {{lineId}}.",
+			"other": "He encontrado %s paradas donde para el {{lineId}}."
+		},
+		"what-direction": "¿En qué dirección quieres cogerlo?",
+		"increase-radius": [
+			"Ampliar rádio de búsqueda",
+			"Ampliar búsqueda",
+			"Ampliar"
+		]
+	},
+	"stop": {
+		"direction": "La parada {{stopId}} se encuenta en {{address}}.",
+		"no-selected": "No has seleccionado ninguna opción de la lista o del carrusel.",
+		"bus-list": {
+			"zero": "Por la parada {{stopId}} no pasa ningún autobús.",
+			"one": "Por la parada {{stopId}} pasa el autobús {{lines}}.",
+			"other": "[2]Por la parada {{stopId}} pasan los autobuses {{lines}}.|Por la parada {{stopId}} pasan %s autobuses: {{lines}}."
+		},
+		"stops-list": {
+			"zero": "El autobús {{lineId}} no para en ninguna parada cerca.",
+			"one": "El autobús {{lineId}} tiene 1 parada cerca.",
+			"other": "El autobús {{lineId}} tiene %s paradas cerca."
+		}
+	},
+	"bus": {
+		"direction-stop-id": "Dirección {{direction}} (parada {{stopId}})",
+		"direction": "Dirección {{direction}}",
+		"directions": "Dirección {{directionA}} o dirección {{directionB}}"
+	},
+	"input": {
+		"stop": {
+			"bus": {
+				"arrival": {
+					"none": "El autobús {{lineId}} no pasa por la parada {{stopId}}.",
+					"past": "El autobús {{lineId}} pasó por la parada {{stopId}} {{timeToArrive}}.",
+					"present": "El autobús {{lineId}} está ahora mismo en la parada {{stopId}}.",
+					"future": "El autobús {{lineId}} pasará por la parada {{stopId}} {{timeToArrive}}."
+				},
+				"arrivalShort": {
+					"past": "el {{lineId}} pasó {{timeToArrive}}",
+					"present": "el {{lineId}} está ahora mismo en la parada",
+					"future": "el {{lineId}} pasará {{timeToArrive}}"
+				}
+			},
+			"arrival": {
+				"zero": "Por la parada {{stopId}} no pasa ningún autobús proximamente.",
+				"one": "Por la parada {{stopId}} pasará el {{lineId}} en {{timeToArrive}}.",
+				"other": "Por la parada {{stopId}} pasan %s autobuses:"
+			}
+		},
+		"unknown": {
+			"UNKNOWN": "Estoy teniendo problemas, puedes intentarlo de nuevo?",
+			"ICANT": "Lo siento, pero no puedo ayudarte con eso."
+		}
+	},
+	"error": {
+		"emtmadrid": {
+			"generic": "¡Vaya! Parece que ha habido algún error consultando con la EMT de Madrid."
+		},
+		"location": {
+			"notGranted": "¡Vaya! Si no puedo acceder a tu dirección no puedo encontrar paradas cerca."
+		}
+	},
+	"fallback": {
+		"general": [
+			"Perdón, ¿a qué te refieres?",
+			"No te entiendo. Puedo decirte cuanto falta para que llegue un autobús o dónde se encuentra la parada. ¿Qué te gustaría saber?",
+			"Creo que no puedo ayudarte, mejor lo intentamos en otro momento."
+		],
+		"list": [
+			"Perdón, ¿a qué te refieres?",
+			"No lo entendi. ¿Podrías repetirlo?",
+			"Estoy teniendo problemas para entenderte. ¿Qué digiste?"
+		],
+		"no-input": [
+			"¿Qué digiste?",
+			"Si sigues ahí, ¿podrías repetirlo?",
+			"De acuerdo, intentémolo más tarde."
+		]
+	},
+	"request": {
+		"permission": {
+			"location": "Para buscar algo cerca"
+		}
+	}
+}

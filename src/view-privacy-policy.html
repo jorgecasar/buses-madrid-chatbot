@@ -1,0 +1,51 @@
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="shared-styles.html">
+
+<dom-module id="view-privacy-policy">
+	<template>
+		<style include="shared-styles">
+			:host {
+				display: block;
+				padding: 10px;
+			}
+		</style>
+
+		<div class="card">
+			<h1>Política de Privacidad</h1>
+			<p>Esta página le informa sobre nuestras políticas con respecto a la recopilación, el uso y la divulgación de información personal.</p>
+			<p>No recopilamos ninguna información personal para el funcionamiento del sitio y todas las aplicaciones que pueden distribuirse.</p>
+			<p>Nuestro sitio web puede usar servicios de terceros, como Google Analytics, que recopilan, supervisan y analizan nuestro tráfico web. Nuestro sitio web y/o aplicaciones no usan "cookies" para recopilar información sobre nuestros visitantes y usuarios.</p>
+			<p>Nos reservamos el derecho de actualizar o cambiar nuestra Política de privacidad en cualquier momento y usted debe verificar esta Política de privacidad periódicamente. Su uso continuado del Servicio después de que publiquemos cualquier modificación a la Política de Privacidad en esta página constituirá su reconocimiento de las modificaciones y su consentimiento para cumplir y estar sujeto a la Política de Privacidad modificada.</p>
+
+			<h2>¿Qué información recopilará?</h2>
+			<p>No recopilamos información sobre el usuario. Tampoco estamos requiriendo que inicie sesión.</p>
+			<p>Tenga en cuenta que si ya inicia sesión (por ejemplo, con su ID de Google) esta información se envía a dialogflow.com.</p>
+
+			<h2>¿Cómo se usa la información?</h2>
+			<p>No estamos utilizando ninguna información que nos brinde.</p>
+			<p>Estamos utilizando los comandos (por ejemplo, detener identificaciones, números de bus, ubicación) para comprender lo que desea saber y devolverle los datos.</p>
+
+			<h2>¿Qué información compartes?</h2>
+			<p>No compartiremos información con terceros como parte del servicio.</p>
+			<p>Nunca.</p>
+		</div>
+	</template>
+
+	<script>
+		class ViewPrivacyPolicy extends Polymer.Element {
+			static get is() { return 'view-privacy-policy'; }
+		}
+
+		window.customElements.define(ViewPrivacyPolicy.is, ViewPrivacyPolicy);
+	</script>
+</dom-module>

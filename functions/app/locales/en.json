@@ -1,0 +1,123 @@
+{
+	"app": {
+		"name": "Madrid Buses"
+	},
+	"text": {
+		"separator": {
+			"item": ", ",
+			"and": " and ",
+			"or": " or "
+		},
+		"more-help": [
+			"Can I help you with something else?",
+			"Anything else?",
+			"What else can I help you with?",
+			"Do you want to know something else?",
+			"Do you have another question?"
+		],
+		"map": "map"
+	},
+	"goodbye": [
+		"See you again!",
+		"Have a good trip!",
+		"See you in other moment.",
+		"Bye!"
+	],
+	"welcome": {
+		"greeting": "Welcome to {{appName}}! How can I help you?",
+		"welcomeback": [
+			"Hello!",
+			"Good",
+			"Hey, again around here.",
+			"Nice to see you again!"
+		]
+	},
+	"stops": {
+		"stops-list": {
+			"none": "I haven't found any stop where for the {{lineId}}.",
+			"one": "I found a stop where for the {{lineId}}.",
+			"other": "I've found %s stops where for the {{lineId}}."
+		},
+		"what-direction": "In which direction do you want to take it?",
+		"increase-radius": [
+			"Enlarge search radius",
+			"Enlarge search",
+			"Enlarge"
+		]
+	},
+	"stop": {
+		"direction": "The stop {{stopId}} is at {{address}}.",
+		"no-selected": "You did not select any item from the list or carousel",
+		"bus-list": {
+			"zero": "No bus stops at {{stopId}}.",
+			"one": "At the bus-stop {{stopId}} stops the bus {{lines}}.",
+			"other": "[2]At the bus-stop {{stopId}} stops the bus {{lines}}.|At the bus-stop {{stopId}} stops %s buses: {{lines}}."
+		},
+		"stops-list": {
+			"zero": "The bus {{lineId}} doesn't stop at any stop close.",
+			"one": "The bus {{lineId}} has 1 stop close.",
+			"other": "The bus {{lineId}} has %s stops close."
+		}
+	},
+	"bus": {
+		"direction-stop-id": "To {{direction}} (stop {{stopId}})",
+		"direction": "To {{direction}}",
+		"directions": "To {{directionA}} or To {{directionB}}"
+	},
+	"input": {
+		"stop": {
+			"bus": {
+				"arrival": {
+					"none": "The bus {{lineId}} doesn't stop at {{stopId}}.",
+					"past": "The bus {{lineId}} stoppped at the bus-stop {{stopId}} {{timeToArrive}}.",
+					"present": "The bus {{lineId}} is right now at the bus-stop {{stopId}}.",
+					"future": "The bus {{lineId}} will stop at the bus-stop {{stopId}} {{timeToArrive}}."
+				},
+				"arrivalShort": {
+					"past": "the bus {{lineId}} stoppped {{timeToArrive}}",
+					"present": "the bus {{lineId}} is right now at the bus-stop",
+					"future": "the bus {{lineId}} will stop {{timeToArrive}}"
+				}
+			},
+			"arrival": {
+				"zero": "No bus stops at {{stopId}} soon.",
+				"one": "At the bus-stop {{stopId}} will stop the bus {{lineId}} {{timeToArrive}}.",
+				"other": "At the bus-stop {{stopId}} will stop %s buses:"
+			}
+		},
+		"unknown": {
+			"UNKNOWN": "I'm having problems, can you try it again?",
+			"ICANT": "I'm sorry, but I can't help you with that."
+		}
+	},
+	"error": {
+		"emtmadrid": {
+			"generic": "Wow! It seems that there has been some error with the Madrid EMT."
+		},
+		"location": {
+			"notGranted": "Wow! If I can not access to your address I can't find stops nearby."
+		}
+	},
+	"fallback": {
+		"general": [
+			"Perdón, ¿a qué te refieres?",
+			"No te entiendo. Puedo decirte cuanto falta para que llegue un autobús o dónde se encuentra la parada. ¿Qué te gustaría saber?",
+			"Creo que no puedo ayudarte, mejor lo intentamos en otro momento."
+		],
+		"list": [
+			"Sorry, what do you mean?",
+			"I don't understand you, I can tell you how long a bus will take to arrive or where the stop is located. What would you like to know?",
+			"I think I cann't help you, we try again later."
+		],
+		"no-input": [
+			"What did you say?",
+			"If you're still there, could you repeat it?",
+			"Okay, I'll try later."
+		]
+	},
+	"request": {
+		"permission": {
+			"location": "To find something nearby"
+		}
+	}
+}
