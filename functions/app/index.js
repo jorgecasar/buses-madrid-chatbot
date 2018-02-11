@@ -71,7 +71,7 @@ class App extends DialogflowApp {
 	}
 
 	getMoreHelpText() {
-		return this.getRandomFromArray(this.i18n.__('text.more-help'));
+		return ' ' + this.getRandomFromArray(this.i18n.__('text.more-help'));
 	}
 
 	getRandomFromArray(arr) {

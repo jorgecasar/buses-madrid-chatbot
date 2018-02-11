@@ -64,8 +64,10 @@ function handleResponse(stopId, lineId, response) {
 			{ stopId: response, lineId }
 		);
 	}
-	let moreHelp = this.getMoreHelpText()
-	return this.ask(`${responseText} ${moreHelp}`);
+	return this.ask(
+		responseText
+		+ this.getMoreHelpText()
+	);
 }
 
 module.exports = handler;

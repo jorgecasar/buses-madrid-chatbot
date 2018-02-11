@@ -47,8 +47,10 @@ function handleResponse(response) {
 			lines: linesText
 		}
 	);
-	let moreHelp = this.getMoreHelpText();
-	return this.ask(`${responseText} ${moreHelp}`, this.i18n.__('fallback.list'));
+	return this.ask(
+		responseText + this.getMoreHelpText(),
+		this.i18n.__('fallback.list')
+	);
 }
 
 module.exports = handler;

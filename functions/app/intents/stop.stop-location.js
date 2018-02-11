@@ -21,7 +21,10 @@ function handler(app){
 	debug('OPTION_SELECTED', optionSelected);
 
 	if (!optionSelected) {
-		app.ask(app.i18n.__('stop.no-selected'));
+		app.ask(
+			app.i18n.__('stop.no-selected')
+			+ app.getMoreHelpText()
+		);
 	} else if (optionSelected === 'INCREASE_RADIUS') {
 		app.data.radius = parseInt(app.data.radius, 10);
 		if (app.data.radius < 800) {
@@ -34,9 +37,10 @@ function handler(app){
 			});
 		} else {
 			let bus = app.getContextArgument('input', 'bus').value;
-			app.ask(app.i18n.__('stops.stops-list.zero', {
-				lineId: bus.lineId
-			}));
+			app.ask(
+				app.i18n.__('stops.stops-list.zero', {lineId: bus.lineId})
+				+ app.getMoreHelpText()
+			);
 		}
 	} else {
 		let stop = app.getContextArgument('stops', optionSelected);
@@ -48,14 +52,17 @@ function handler(app){
 					.addSimpleResponse(app.i18n.__('stop.direction', {
 						stopId: stop.stopId,
 						address: stop.postalAddress
-					})+ ' ' + app.getMoreHelpText())
+					}) + app.getMoreHelpText())
 					.addSuggestionLink(
 						app.i18n.__('text.map'),
 						getMapsUrl(stop.postalAddress + ', Madrid')
 					)
 			);
 		} else {
-			app.ask(app.i18n.__('stop.no-selected'));
+			app.ask(
+				app.i18n.__('stop.no-selected')
+				+ app.getMoreHelpText()
+			);
 		}
 	}
 }

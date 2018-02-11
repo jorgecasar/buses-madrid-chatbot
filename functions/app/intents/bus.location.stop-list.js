@@ -32,7 +32,17 @@ function findStops(app) {
 	debug(`coordinates ${latitude}, ${longitude}`);
 	let bus = app.getContextArgument('input', 'bus');
 	bus = bus && bus.value ? bus.value : null;
+
+	app.timeout = setTimeout(() => {
+		clearTimeout(app.timeout);
+		error('EMT Timeout');
+		app.tell(app.i18n.__('error.emtmadrid.timeout'));
+	}, 5000);
 	geo.stops({ latitude, longitude }, bus.lineId, app.data.radius)
+		.then(response => {
+			clearTimeout(app.timeout);
+			return response;
+		})
 		.then(findPairStops.bind(app, bus.lineId))
 		.then(buildResponse.bind(app, bus.lineId));
 }
@@ -103,9 +113,8 @@ function buildResponse(lineId, stopTo) {
 		);
 	} else {
 		app.ask(
-			app.i18n.__('stops.stops-list.none', { lineId, radius: app.data.radius}) +
-			' ' +
-			' '
+			app.i18n.__('stops.stops-list.none', { lineId, radius: app.data.radius})
+			+ this.getMoreHelpText()
 		);
 	}
 }
@@ -113,6 +122,7 @@ function buildResponse(lineId, stopTo) {
 function buildClosestStopsList(app, lineId, stopTo) {
 	const list = app.buildList(`Paradas del autobús ${lineId} más cercanas`);
 	const headers = Object.keys(stopTo);
+	let stopsContext = {};
 	for (let head of headers) {
 		if (stopTo[head]) {
 			let stop = stopTo[head]
@@ -120,12 +130,10 @@ function buildClosestStopsList(app, lineId, stopTo) {
 			let title = app.i18n.__('bus.direction-stop-id', {
 				direction, stopId: stop.stopId
 			});
-			app.setContext('stops', 1, {
-				[head]: {
-					stopId: stop.stopId,
-					postalAddress: stop.postalAddress
-				}
-			});
+			stopsContext[head] = {
+				stopId: stop.stopId,
+				postalAddress: stop.postalAddress
+			};
 			list.addItems(
 				app.buildOptionItem(
 					head,
@@ -136,6 +144,7 @@ function buildClosestStopsList(app, lineId, stopTo) {
 			);
 		}
 	}
+	app.setContext('stops', 2, stopsContext);
 	return list;
 }
 

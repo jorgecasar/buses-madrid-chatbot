@@ -24,12 +24,11 @@
 		"¡Hasta luego!"
 	],
 	"welcome": {
-		"greeting": "¡Bienvenido a {{appName}}! ¿En qué puedo ayudarte?",
+		"greeting": "¡Bienvenido a {{appName}}! Puedo decirte cuanto falta para que llegue un autobús o dónde se encuentra la parada. ¿Qué te gustaría saber?",
 		"welcomeback": [
-			"¡Hola!",
-			"Buenas",
-			"Hey, otra vez por aquí.",
-			"¡Qué bien verte otra vez!"
+			"Hola, ¡estas de vuelta!",
+			"Buenas, ¡qué bien verte otra vez!",
+			"Hey, otra vez por aquí."
 		]
 	},
 	"stops": {
@@ -92,7 +91,8 @@
 	},
 	"error": {
 		"emtmadrid": {
-			"generic": "¡Vaya! Parece que ha habido algún error consultando con la EMT de Madrid."
+			"generic": "¡Vaya! Parece que ha habido algún error consultando con la EMT de Madrid.",
+			"timeout": "Parece que la EMT está tardando mucho en responder. Es mejor que lo intentemos en otro momento."
 		},
 		"location": {
 			"notGranted": "¡Vaya! Si no puedo acceder a tu dirección no puedo encontrar paradas cerca."
